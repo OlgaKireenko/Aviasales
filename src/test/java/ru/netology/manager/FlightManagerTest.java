@@ -35,6 +35,15 @@ class FlightManagerTest {
     @Test
     void searchBy() {
 
+        Flight[] expected = new Flight[]{First3};
+        Flight[] actual = manager.searchBy("DME3", "VNU3");
+
+
+        assertArrayEquals(actual, expected);
+    }
+    @Test
+    void searchBy2() {
+
         Flight[] expected = new Flight[]{First2};
         Flight[] actual = manager.searchBy("DME2", "VNU2");
 
@@ -42,7 +51,7 @@ class FlightManagerTest {
         assertArrayEquals(actual, expected);
     }
     @Test
-    void searchBy2() {
+    void searchBy3() {
 
         Flight[] expected = new Flight[]{};
         Flight[] actual = manager.searchBy("DME1", "VNU2");
